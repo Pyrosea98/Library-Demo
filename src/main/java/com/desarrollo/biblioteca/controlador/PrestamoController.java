@@ -26,7 +26,7 @@ public class PrestamoController{
      * @return el prestamo creado
      */
     @PostMapping(value = "/loan/validate")
-    public Mono<Prestamo> createPrestamo(@Valid @RequestBody Prestamo prestamo){
+    public Mono<Prestamo> createPrestamo(@Valid Prestamo prestamo){
         return this.prestamoService.createPrestamo(prestamo);
     }
 

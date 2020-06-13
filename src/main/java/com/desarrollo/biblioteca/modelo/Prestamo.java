@@ -15,8 +15,7 @@ public class Prestamo {
      * identificador autogenerado para indexación de la tabla
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "prestamo_prestamo_id_seq")
-    @SequenceGenerator(name = "prestamo_prestamo_id_seq")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "prestamo_id")
     private Long prestamo_id;
 

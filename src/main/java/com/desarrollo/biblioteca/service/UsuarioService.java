@@ -34,4 +34,10 @@ public interface UsuarioService {
      */
     public Usuario getUsuarioById(String dni);
 
+    /**
+     * Encontrar usuario por correo
+     * @param correo el correo del usuario
+     */
+    public Usuario getUsuarioByCorreo(String correo);
+
 }

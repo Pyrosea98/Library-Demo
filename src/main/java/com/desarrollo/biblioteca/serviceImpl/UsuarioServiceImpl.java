@@ -36,4 +36,9 @@ public class UsuarioServiceImpl implements UsuarioService {
     public Usuario getUsuarioById(String dni) {
         return usuarioDAO.findUsuarioById(dni);
     }
+
+    @Override
+    public Usuario getUsuarioByCorreo(String correo) {
+        return usuarioDAO.findUsuarioByCorreo(correo);
+    }
 }

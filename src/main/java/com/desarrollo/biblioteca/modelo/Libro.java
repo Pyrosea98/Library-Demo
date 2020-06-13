@@ -16,8 +16,7 @@ public class Libro implements Serializable {
      * identificador autogenerado para indexación de la tabla
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "libro_libro_id_seq")
-    @SequenceGenerator(name = "libro_libro_id_seq")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "libro_id")
     private Long libro_id;
 
@@ -37,7 +36,7 @@ public class Libro implements Serializable {
      * Categoría del libro para filtros
      */
     @Column(name = "categoria", length = 100)
-    private String categoría;
+    private String categoria;
 
     /**
      * Campo de la URL de la imagen
@@ -77,7 +76,11 @@ public class Libro implements Serializable {
         this.imagen_url = imagen_url;
     }
 
-    public String getCategoría() { return categoría; }
+    public String getCategoria() {
+        return categoria;
+    }
 
-    public void setCategoría(String categoría) { this.categoría = categoría; }
+    public void setCategoría(String categoria) {
+        this.categoria = categoria;
+    }
 }

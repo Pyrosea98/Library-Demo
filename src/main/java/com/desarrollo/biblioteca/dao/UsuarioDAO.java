@@ -26,4 +26,10 @@ public interface UsuarioDAO {
      * @param dni el dni del usuario
      */
     public Usuario findUsuarioById(String dni);
+
+    /**
+     * Encontrar usuario por correo
+     * @param correo el correo del usuario
+     */
+    public Usuario findUsuarioByCorreo(String correo);
 }

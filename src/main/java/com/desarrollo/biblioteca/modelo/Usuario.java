@@ -15,8 +15,7 @@ public class Usuario implements Serializable {
      * identificador autogenerado para indexación de la tabla
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "usuario_usuario_id_seq")
-    @SequenceGenerator(name = "usuario_usuario_id_seq")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "usuario_id")
     private Long usuario_id;
 

@@ -37,4 +37,10 @@ public class UsuarioDAOImpl implements UsuarioDAO {
         return (Usuario) entityManager.createQuery(
                 "select u from  usuario  as u where u.dni = :dni").setParameter("dni", dni).getSingleResult();
     }
+
+    @Override
+    public Usuario findUsuarioByCorreo(String correo) {
+        return (Usuario) entityManager.createQuery(
+                "select u from  usuario  as u where u.correo = :correo").setParameter("correo", correo).getSingleResult();
+    }
 }
